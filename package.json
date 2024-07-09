@@ -1,0 +1,14 @@
+{
+  "name": "projeto-backnetflix",
+  "version": "1.0.0",
+  "description": "Projeto desenvolvido durante um curso de back-end sobre NodeJS com Express onde ao decorrer dele criaremos um back-end semelhante ao da Netflix!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
