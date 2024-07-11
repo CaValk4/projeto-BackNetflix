@@ -8,7 +8,7 @@ const Filme = mongoose.model('Filme', {
     atores: Array,
     ano: Number,
     detalhes: Object,
-    premiações: [Object]
+    premiacoes: [Object]
  });
 
  module.exports = Filme;
