@@ -1,5 +1,6 @@
 const express = require('express');
-const router = express.Router();	
+const router = express.Router();
+const Filme = require('../models/filme');	
 
 
 
@@ -16,10 +17,15 @@ router.get('/:id', (req, res)=>{
 
 //CRIAR UM REGISTRO
 
-router.post('/', (req, res)=>{
+router.post('/', async (req, res)=>{
 
-    const body = req.body;
-    res.json(body)
+    try {
+        const filme = req.body;
+        const response = await new Filme(filme).save();
+         res.json({ error: false, filme: response });
+    } catch (err) {
+        res.json({ error: true, message: err.message });
+    }
 });
 
 //EDITAR DADOS DO REGISTRO
