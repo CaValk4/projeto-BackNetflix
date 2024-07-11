@@ -4,6 +4,7 @@ const Filme = mongoose.model('Filme', {
     titulo: {
         type: String,
         required: true,
+        unique: true
     },
     atores: Array,
     ano: Number,
