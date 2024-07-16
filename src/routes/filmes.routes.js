@@ -23,6 +23,7 @@ router.post('/', async (req, res)=>{
         const filme = req.body;
         console.log(filme)
         const response = await new Filme(filme).save();
+        
          res.json({ error: false, filme: response });
     } catch (err) {
         res.json({ error: true, message: err.message });
@@ -44,6 +45,5 @@ router.delete('/:id', (req, res)=>{
     const id = req.params.id;
     res.json({ mensagem: `DELETE JUST THE RECORD WITH ID: ${id}`});
 });
-
 
 module.exports = router;
