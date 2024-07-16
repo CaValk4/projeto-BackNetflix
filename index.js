@@ -4,9 +4,9 @@ const bodyParser = require("body-parser");
 const app = express();
 const mongoose = require("mongoose");
 
-const routes = require('./src/routes/filmes.routes')
+const routes = require('./src/routes/filmes.routes');
 
-app.use('/', routes)
+app.use('/', routes);
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 
